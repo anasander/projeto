@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stations</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/equipe.css">
+    <title>Equipe | Stations</title>
 </head>
 <body>
     <header id="header">
@@ -20,62 +22,85 @@
     </header>
 
     <main class="team-section">
-        <section class="team-header">
-            <h1>Nossas áreas de atuação</h1>
-            <p>A Stations é organizada em núcleos multidisciplinares. Conheça os setores que trabalham de forma integrada para viabilizar o sucesso do seu projeto.</p>
-        </section>
+        <header class="team-header">
+            <h1>Nossas Áreas de Atuação</h1>
+            <p>A Stations é organizada em núcleos multidisciplinares. Conheça os setores que trabalham de forma integrada.</p>
+        </header>
 
         <div class="team-grid">
             <article class="card" aria-labelledby="sector-1">
-                <div class="icon-container">
-                    <img src="/assets/icons/computer-solid-full.svg" alt="Ícone de Tecnologia" class="sector-icon" width="80" height="80">
+                <div class="card-image">
+                    <img src="/assets/img/computer.jpg" alt="Programação">
                 </div>
-                <h2 class="name" id="sector-1">Desenvolvimento e Programação</h2>
-                <p class="role">Front-End, Back-End e QA</p>
-                <p class="bio">Focado em criar infraestruturas sólidas, utilizando React e Next.js para garantir performance, escalabilidade e segurança.</p>
+                <div class="card-content">
+                    <div class="icon-container">
+                        <img src="/assets/icons/computer-solid-full.svg" alt="Ícone Tecnologia" class="sector-icon">
+                    </div>
+                    <h3 class="name" id="sector-1">Desenvolvimento</h3>
+                    <p class="role">Front-End, Back-End e QA</p>
+                    <p class="bio">Focado em criar infraestruturas sólidas utilizando React e Next.js.</p>
+                </div>
             </article>
 
             <article class="card" aria-labelledby="sector-2">
-                <div class="icon-container">
-                    <img src="/assets/icons/image-solid-full.svg" alt="Ícone de Design" class="sector-icon" width="80" height="80">
+                <div class="card-image">
+                    <img src="/assets/img/design.jpg" alt="Design de Interface">
                 </div>
-                <h3 class="name" id="sector-2">Design de Experiência e Visual</h3>
-                <p class="role">UX/UI e Visual Design</p>
-                <p class="bio">Transformamos ideias em interfaces intuitivas e esteticamente impactantes, priorizando a jornada do usuário e a identidade da marca.</p>
+                <div class="card-content">
+                    <div class="icon-container">
+                    <img src="/assets/icons/image-solid-full.svg" alt="Ícone Design" class="sector-icon">
+                    </div>
+                    <h3 class="name" id="sector-2">Design Visual</h3>
+                    <p class="role">UX/UI e Visual Design</p>
+                    <p class="bio">Transformamos ideias em interfaces intuitivas e esteticamente impactantes.</p>
+                </div>
             </article>
 
             <article class="card" aria-labelledby="sector-3">
-                <div class="icon-container">
-                    <img src="/assets/icons/box-solid-full.svg" alt="Ícone de Produto" class="sector-icon" width="80" height="80">
+                <div class="card-image">
+                    <img src="/assets/img/product.jpg" alt="Reunião de Planejamento">
                 </div>
-                <h3 class="name" id="sector-3">Produto e Pesquisa</h3>
-                <p class="role">UX Research e Product Strategy</p>
-                <p class="bio">Baseamos nossas decisões em dados e comportamento humano para garantir que o produto final resolva problemas reais do mercado.</p>
+                <div class="card-content">
+                    <div class="icon-container">
+                        <img src="/assets/icons/box-solid-full.svg" alt="Ícone Produto" class="sector-icon">
+                    </div>
+                    <h3 class="name" id="sector-3">Produto e Pesquisa</h3>
+                    <p class="role">UX Research e Estratégia</p>
+                    <p class="bio">Baseamos nossas decisões em dados para resolver problemas reais do mercado.</p>
+                </div>
             </article>
 
             <article class="card" aria-labelledby="sector-4">
-                <div class="icon-container">
-                    <img src="/assets/icons/black-tie-brands-solid-full.svg" alt="Ícone de Administrativo" class="sector-icon" width="80" height="80">
+                <div class="card-image">
+                    <img src="/assets/img/growth.jpg" alt="Crescimento e Marketing">
                 </div>
-                <h3 class="name" id="sector-4">Operações e Growth</h3>
-                <p class="role">Administrativo e Marketing</p>
-                <p class="bio">Gestão eficiente e estratégias de crescimento que conectam a tecnologia da Stations ao público-alvo ideal.</p>
+                <div class="card-content">
+                    <div class="icon-container">
+                        <img src="/assets/icons/black-tie-brands-solid-full.svg" alt="Ícone Crescimento" class="sector-icon">
+                    </div>
+                    <h3 class="name" id="sector-4">Operações e Growth</h3>
+                    <p class="role">Gestão e Marketing</p>
+                    <p class="bio">Estratégias de crescimento que conectam a tecnologia ao público ideal.</p>
+                </div>
             </article>
         </div>
     </main>
 
     <footer id="footer">
-        <a href="/"><img src="/assets/logo-stations.svg" alt="Logo da Stations"></a>
-        <p>&copy; 2026 Stations. Todos os direitos reservados.</p>
+        <div id="footer-container">
+            <a href="/"><img src="/assets/logo-stations-white.svg" alt="Logo da Stations"></a>
 
-        <nav id="navigation-footer">
-            <ul>
-                <li><a href="/equipe.html">Equipe</a></li>
-                <li><a href="/produtos.html">Produtos</a></li>
-                <li><a href="/redes.html">Redes sociais</a></li>
-                <li><a href="/contato.html">Contato</a></li>
-            </ul>
-        </nav>
+            <nav id="navigation-footer">
+                <ul>
+                    <li><a href="/equipe.html">Equipe</a></li>
+                    <li><a href="/produtos.html">Produtos</a></li>
+                    <li><a href="/redes.html">Redes sociais</a></li>
+                    <li><a href="/contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <p id="footer-text">&copy; 2026 Stations. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>

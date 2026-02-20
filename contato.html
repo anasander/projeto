@@ -1,74 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stations</title>
+    <title>Contato | Stations</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/contato.css">
 </head>
-
 <body>
     <header id="header">
-        <a href="/"><img src="/assets/logo-stations.svg" alt="Logo da Stations"></a>
-        
+        <a href="/index.html"><img src="/assets/logo-stations.svg" alt="Logo da Stations"></a>
         <nav id="navigation-header">
-            <ul>
-            <li><a href="/equipe.html">Equipe</a></li>
-            <li><a href="/produtos.html">Produtos</a></li>
-            <li><a href="/redes.html">Redes sociais</a></li>
-            <li><a href="/contato.html">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <div>
-            <h2>Entre em Contato</h2>
-            <p>Preencha o formulário abaixo e nossa equipe retornará em breve.</p>
-            
-            <form action="#" method="post">
-                <div>
-                    <label for="nome">Nome Completo:</label><br>
-                    <input type="text" id="nome" name="nome" required>
-                </div>
-
-                <div>
-                    <label for="email">E-mail Corporativo:</label><br>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div>
-                    <label for="assunto">Assunto:</label><br>
-                    <select id="assunto" name="assunto">
-                        <option value="orcamento">Orçamento</option>
-                        <option value="suporte">Suporte Técnico</option>
-                        <option value="parceria">Parcerias</option>
-                        <option value="outros">Outros</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="mensagem">Como podemos ajudar?</label><br>
-                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-                </div>
-
-                <button type="submit">Enviar Mensagem</button>
-            </form>
-        </div>
-
-        <div>
-            <address>
-                <strong>Stations Tecnologia</strong><br>
-                Travessa dos Inconfidentes, 123 - Centro - Belo Horizonte/MG<br>
-                Contato: <a href="mailto:contato@stations.com">contato@stations.com</a>
-            </address>
-        </div>
-    </main>
-
-    <footer id="footer">
-        <a href="/"><img src="/assets/logo-stations.svg" alt="Logo da Stations"></a>
-        <p>&copy; 2026 Stations. Todos os direitos reservados.</p>
-
-        <nav id="navigation-footer">
             <ul>
                 <li><a href="/equipe.html">Equipe</a></li>
                 <li><a href="/produtos.html">Produtos</a></li>
@@ -76,7 +18,90 @@
                 <li><a href="/contato.html">Contato</a></li>
             </ul>
         </nav>
-    </footer>
-</body>
+    </header>
 
+    <main id="main-contact">
+        <div class="contact-container">
+            <section class="contact-section-form">
+                <h2 class="text-title">Entre em Contato</h2>
+                <p class="text-subtitle">Preencha o formulário abaixo e nossa equipe retornará em breve.</p>
+                
+                <form id="stations-contact-form" class="stations-form">
+                    <div class="input-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">E-mail Corporativo</label>
+                        <input type="email" id="email" name="email" placeholder="email@empresa.com" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="assunto">Assunto</label>
+                        <select id="assunto" name="assunto">
+                            <option value="orcamento">Orçamento</option>
+                            <option value="suporte">Suporte Técnico</option>
+                            <option value="parceria">Parcerias</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="mensagem">Como podemos ajudar?</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva sua necessidade..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                </form>
+            </section>
+
+            <aside class="contact-info">
+                <div class="info-card">
+                    <h3 class="class-bold">Stations Tecnologia</h3>
+                    <address>
+                        <p>Travessa dos Inconfidentes, 123</p>
+                        <p>Centro - Belo Horizonte/MG</p>
+                        <p class="mail-link">Contato: <a href="mailto:contato@stations.com">contato@stations.com</a></p>
+                    </address>
+                </div>
+                <div class="response-time">
+                    <p> Retorno do nosso time é dado em até 24 horas úteis.</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div id="footer-container">
+            <a href="/index.html"><img src="/assets/logo-stations-white.svg" alt="Logo da Stations"></a>
+            <nav id="navigation-footer">
+                <ul>
+                    <li><a href="/equipe.html">Equipe</a></li>
+                    <li><a href="/produtos.html">Produtos</a></li>
+                    <li><a href="/redes.html">Redes sociais</a></li>
+                    <li><a href="/contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p id="footer-text">&copy; 2026 Stations. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- <script>
+        // Lógica de envio
+        document.getElementById('stations-contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('.btn-submit');
+            btn.innerText = 'Enviando...';
+            btn.style.opacity = '0.7';
+
+            setTimeout(() => {
+                alert('Mensagem enviada com sucesso! Em breve um especialista Stations entrará em contato.');
+                this.reset();
+                btn.innerText = 'Enviar Mensagem';
+                btn.style.opacity = '1';
+            }, 1200);
+        });
+    </script> -->
+</body>
 </html>
