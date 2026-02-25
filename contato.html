@@ -28,18 +28,19 @@
                 
                 <form id="stations-contact-form" class="stations-form">
                     <div class="input-group">
-                        <label for="nome">Nome Completo</label>
+                        <label for="nome">Nome Completo *</label>
                         <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="email">E-mail Corporativo</label>
-                        <input type="email" id="email" name="email" placeholder="email@empresa.com" required>
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" placeholder="usuario@email.com" required>
                     </div>
 
                     <div class="input-group">
                         <label for="assunto">Assunto</label>
                         <select id="assunto" name="assunto">
+                            <option value="" disabled selected>Selecione um assunto</option>
                             <option value="orcamento">Orçamento</option>
                             <option value="suporte">Suporte Técnico</option>
                             <option value="parceria">Parcerias</option>
@@ -48,7 +49,7 @@
                     </div>
 
                     <div class="input-group">
-                        <label for="mensagem">Como podemos ajudar?</label>
+                        <label for="mensagem">Como podemos ajudar? *</label>
                         <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva sua necessidade..." required></textarea>
                     </div>
 
@@ -87,21 +88,7 @@
         <p id="footer-text">&copy; 2026 Stations. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- <script>
-        // Lógica de envio
-        document.getElementById('stations-contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const btn = this.querySelector('.btn-submit');
-            btn.innerText = 'Enviando...';
-            btn.style.opacity = '0.7';
-
-            setTimeout(() => {
-                alert('Mensagem enviada com sucesso! Em breve um especialista Stations entrará em contato.');
-                this.reset();
-                btn.innerText = 'Enviar Mensagem';
-                btn.style.opacity = '1';
-            }, 1200);
-        });
-    </script> -->
+    <script src="/script.js"></script>
 </body>
+
 </html>
